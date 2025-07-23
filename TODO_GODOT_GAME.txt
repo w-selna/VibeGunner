@@ -1,0 +1,18 @@
+TODO for Godot C# Circle Shooter Game:
+
+1. Create a new Godot project and enable C# support.
+2. Add a Node2D as the root node of your main scene. Name it 'Main' or similar.
+3. Add a Node2D as a child of the root node. Name it 'Player'.
+4. Attach the Player.cs script to the Player node.
+5. Design the Player node to look like a circle (e.g., add a Sprite or draw a circle in _Draw).
+6. Create a new scene for the projectile:
+   - Add a Node2D as the root, name it 'Projectile'.
+   - Attach the Projectile.cs script to it.
+   - Design the projectile's appearance (e.g., small circle or sprite).
+   - Save the scene as 'Projectile.tscn'.
+7. In the Player node, assign the 'Projectile.tscn' to the 'ProjectileScene' export variable in the Inspector.
+8. Set up input actions in Project Settings > Input Map:
+   - 'ui_up', 'ui_down', 'ui_left', 'ui_right' for movement (if not already present).
+   - 'mouse_left' for shooting (bind to left mouse button).
+9. Add the Player node to the main scene and run the game.
+10. Test and tweak as needed (e.g., speed, visuals, collision, etc.).

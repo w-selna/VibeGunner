@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://6ycjcsi4h2dp"]
+
+[ext_resource type="Script" uid="uid://bp4lpjmeek0t2" path="res://Player.cs" id="2_0e48y"]
+[ext_resource type="PackedScene" uid="uid://ct2i7e7gwj4tn" path="res://Projectile.tscn" id="2_epypp"]
+[ext_resource type="Texture2D" uid="uid://cnipg3cowfhlc" path="res://cir_sprite.png" id="3_epypp"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Player" type="Node2D" parent="."]
+script = ExtResource("2_0e48y")
+ProjectileScene = ExtResource("2_epypp")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+texture = ExtResource("3_epypp")

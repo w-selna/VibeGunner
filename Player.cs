@@ -8,6 +8,8 @@ public partial class Player : Node2D
 	
 	[Export]
 	public float Speed = 200f;
+	
+	public int KillCount = 0;
 
 	public override void _Process(double delta)
 	{
@@ -25,6 +27,12 @@ public partial class Player : Node2D
 		{
 			ShootProjectile();
 		}
+	}
+	
+	public void AddKill()
+	{
+		KillCount++;
+		GD.Print($"Kill Count: {KillCount}");
 	}
 	
 	private void ShootProjectile()

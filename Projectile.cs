@@ -4,13 +4,16 @@ using System;
 public partial class Projectile : Node2D
 {
 	[Export]
-	public float Speed = 400f;
+	public float Speed = 800f;
 	public Vector2 direction = Vector2.Zero;
 	
 	private Area2D collisionArea;
 
 	public override void _Ready()
 	{
+		// Add to projectile group for easy cleanup during game reset
+		AddToGroup("projectile");
+		
 		// Create collision area for the projectile
 		collisionArea = new Area2D();
 		var collisionShape = new CollisionShape2D();

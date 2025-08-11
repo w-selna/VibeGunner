@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bp4lpjmeek0t2" path="res://Player.cs" id="2_0e48y"]
 [ext_resource type="PackedScene" uid="uid://ct2i7e7gwj4tn" path="res://Projectile.tscn" id="2_epypp"]
-[ext_resource type="Texture2D" uid="uid://cnipg3cowfhlc" path="res://cir_sprite.png" id="3_epypp"]
+[ext_resource type="Texture2D" uid="uid://ctf5wfxsujawj" path="res://New_Player.png" id="3_kdubu"]
 [ext_resource type="Script" uid="uid://ck7fd61r5ymp7" path="res://ZombieSpawner.cs" id="4_spawner"]
 [ext_resource type="PackedScene" uid="uid://bq8x7y203w4v5" path="res://Basic_Zombie.tscn" id="5_zombie"]
 [ext_resource type="Script" uid="uid://chbwane4bej2o" path="res://GameUI.cs" id="6_ui"]
@@ -14,7 +14,7 @@ script = ExtResource("2_0e48y")
 ProjectileScene = ExtResource("2_epypp")
 
 [node name="Sprite2D" type="Sprite2D" parent="Player"]
-texture = ExtResource("3_epypp")
+texture = ExtResource("3_kdubu")
 
 [node name="ZombieSpawner" type="Node2D" parent="."]
 script = ExtResource("4_spawner")

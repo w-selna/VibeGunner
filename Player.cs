@@ -7,7 +7,7 @@ public partial class Player : Node2D
 	public PackedScene ProjectileScene;
 	
 	[Export]
-	public float Speed = 200f;
+	public float Speed = 150f;
 	
 	[Export]
 	public int MaxHealth = 1; // Player dies in 1 hit
@@ -37,7 +37,7 @@ public partial class Player : Node2D
 		hitbox = new Area2D();
 		hitboxShape = new CollisionShape2D();
 		var circleShape = new CircleShape2D();
-		circleShape.Radius = 25f; // Collision radius for the player
+		circleShape.Radius = 15f; // Collision radius for the player
 		hitboxShape.Shape = circleShape;
 		hitbox.AddChild(hitboxShape);
 		AddChild(hitbox);

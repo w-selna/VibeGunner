@@ -18,7 +18,7 @@ public partial class Projectile : Node2D
 		collisionArea = new Area2D();
 		var collisionShape = new CollisionShape2D();
 		var circleShape = new CircleShape2D();
-		circleShape.Radius = 5f; // Small collision radius
+		circleShape.Radius = 3f; // Small collision radius
 		collisionShape.Shape = circleShape;
 		collisionArea.AddChild(collisionShape);
 		AddChild(collisionArea);

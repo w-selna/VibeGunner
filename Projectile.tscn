@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://ct2i7e7gwj4tn"]
 
 [ext_resource type="Script" uid="uid://cpdwyq77q1enh" path="res://Projectile.cs" id="1_t7eop"]
-[ext_resource type="Texture2D" uid="uid://cdhnjhbkj5k8u" path="res://bullet.png" id="2_e7peq"]
+[ext_resource type="Texture2D" uid="uid://bxfm15df46ufd" path="res://New_Bullet.png" id="2_e7peq"]
 
 [node name="Projectile" type="Node2D"]
 script = ExtResource("1_t7eop")

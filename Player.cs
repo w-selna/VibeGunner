@@ -20,6 +20,7 @@ public partial class Player : Node2D
 	private Control gameOverScreen;
 	private Label killCountLabel;
 	private Button restartButton;
+	private Button exitButton;
 	private bool isDead = false;
 	
 	public override void _Ready()
@@ -109,6 +110,39 @@ public partial class Player : Node2D
 		// Connect the restart button signal
 		restartButton.Pressed += OnRestartPressed;
 		gameOverScreen.AddChild(restartButton);
+		
+		// Create main menu button (top left)
+		var mainMenuButton = new Button();
+		mainMenuButton.Text = "Main Menu";
+		mainMenuButton.AddThemeFontSizeOverride("font_size", 18);
+		mainMenuButton.Size = new Vector2(120, 40);
+		mainMenuButton.SetAnchorsPreset(Control.LayoutPreset.TopLeft);
+		mainMenuButton.Position = new Vector2(20, 20);
+		mainMenuButton.ProcessMode = ProcessModeEnum.Always;
+		
+		// Connect the main menu button signal
+		mainMenuButton.Pressed += OnMainMenuPressed;
+		gameOverScreen.AddChild(mainMenuButton);
+		
+		// Create exit button (top right)
+		exitButton = new Button();
+		exitButton.Text = "EXIT";
+		exitButton.AddThemeFontSizeOverride("font_size", 18);
+		exitButton.Size = new Vector2(120, 40);
+		exitButton.SetAnchorsPreset(Control.LayoutPreset.TopRight);
+		exitButton.Position = new Vector2(-140, 20); // Position from right edge
+		exitButton.ProcessMode = ProcessModeEnum.Always;
+		
+		// Style the exit button with red color
+		exitButton.AddThemeColorOverride("font_color", new Color(1, 1, 1, 1));
+		exitButton.AddThemeColorOverride("bg_color", new Color(0.8f, 0.2f, 0.2f, 1.0f));
+		exitButton.AddThemeColorOverride("bg_color_pressed", new Color(0.6f, 0.1f, 0.1f, 1.0f));
+		exitButton.AddThemeColorOverride("bg_color_hover", new Color(1.0f, 0.3f, 0.3f, 1.0f));
+		exitButton.AddThemeConstantOverride("corner_radius", 4);
+		
+		// Connect the exit button signal
+		exitButton.Pressed += OnExitPressed;
+		gameOverScreen.AddChild(exitButton);
 		
 		// Add to the scene tree
 		GetTree().Root.AddChild(gameOverScreen);
@@ -228,6 +262,38 @@ public partial class Player : Node2D
 		ResetGame();
 		
 		GD.Print("[Player] Game restart complete");
+	}
+	
+	private void OnMainMenuPressed()
+	{
+		GD.Print("[Player] Main Menu button pressed - returning to main menu");
+		
+		// Reset all game metrics (same as restart)
+		ResetPlayer();
+		ResetGame();
+		
+		// Hide the game over screen
+		gameOverScreen.Visible = false;
+		
+		// Unpause the game
+		GetTree().Paused = false;
+		
+		// Change to main menu scene
+		var mainMenuScene = GD.Load<PackedScene>("res://MainMenu.tscn");
+		if (mainMenuScene != null)
+		{
+			GetTree().ChangeSceneToPacked(mainMenuScene);
+		}
+		else
+		{
+			GD.PrintErr("[Player] MainMenu.tscn not found! Cannot return to main menu.");
+		}
+	}
+	
+	private void OnExitPressed()
+	{
+		GD.Print("[Player] Exit button pressed - exiting game");
+		GetTree().Quit();
 	}
 	
 	// Test method to verify button connection

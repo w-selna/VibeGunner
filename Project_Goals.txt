@@ -1,38 +1,46 @@
 MVP NEXT STEPS: (no particular order)
-- Add enemies/targets to shoot at (endless zombies from all directions)
-   - Randomly select from 1 of 100 possible point from the edge of the screen to come in from
-   - Movement is towards the player with some jitter.
-   - Zombies are 1 hit kill (for now).
-- Implement enemy spawning mechanic (Linearly scaling faster spawning as the game goes on)
-   - Starts at like 1 zombie per second and increases every 10 seconds (test this scaling rate)
-   - No maximum number of zombies on the screen
-- Implement game over conditions (you get touched at all you die)
-   - Does not need to be fancy, just within a few pixles.
-   - Death scene displays score and button to start again.
-- Add collisions (bullets hitting enemies, you getting touched by an enemy)
-   - Bullets disappear on hit. 
-- Implement scoring tracking system (number of kills in top corner)
-   -add timer in the other top corner from kill count.
-- Better visuals, scaled correctly/realistically.
-   - for scale, a bullet might just be a small black dot 2x2 pixles.
-   - A player and zombie might only be 20 - 50 pixles tall.
-   - add hit animations
-   - multiple zombie looks
-   - Adjust all speeds (bullets, player, zombie) to feel correct in absolute terms and relative terms.
+- ✅ Add enemies/targets to shoot at (endless zombies from all directions)
+   - ✅ Randomly select from 1 of 100 possible point from the edge of the screen to come in from
+   - ✅ Movement is towards the player with some jitter.
+   - ✅ Zombies are 1 hit kill (for now).
+- ✅ Implement enemy spawning mechanic (Linearly scaling faster spawning as the game goes on)
+   - ✅ Starts at like 1 zombie per second and increases every 10 seconds (test this scaling rate)
+   - ✅ No maximum number of zombies on the screen
+- ✅ Implement game over conditions (you get touched at all you die)
+   - ✅ Does not need to be fancy, just within a few pixles.
+   - ✅ Death scene displays score and button to start again.
+- ✅ Add collisions (bullets hitting enemies, you getting touched by an enemy)
+   - ✅ Bullets disappear on hit. 
+- ✅ Implement scoring tracking system (number of kills in top corner)
+   - ✅ add timer in the other top corner from kill count.
+- 🔄 Better visuals, scaled correctly/realistically.
+   - ✅ for scale, a bullet might just be a small black dot 2x2 pixles.
+   - ✅ A player and zombie might only be 20 - 50 pixles tall.
+   - ❌ add hit animations
+   - ❌ multiple zombie looks
+   - ✅ Adjust all speeds (bullets, player, zombie) to feel correct in absolute terms and relative terms.
 
 POTENTIAL FUTURE ENHANCEMENTS:
-- Create loading screen with start button, intro music, and setting menu to switch input mappings.
-- Implement random boss encounters every so often.
-- Implement different zombie types, like a fast one.
-- Add sound effects and music
-- Create power-ups
-- Add player roll/dodge mechanic
-- Add different weapon types
-- gun moves in the direction of the mouse
-- Add achievements
-- Add loot system
-- Add particle effects
-- Create menu system and pause feature
-- Add background graphics
-- Implement save/load functionality
-- Add RPG elements like day/night cycle and an encampment with fellow survivors to help against the zombie hoards.
+
+🎮 GAMEPLAY MECHANICS:
+- ❌ Add player roll/dodge mechanic
+- ❌ Add different weapon types
+- ❌ gun moves in the direction of the mouse
+- ❌ Create power-ups
+- ❌ Implement random boss encounters every so often
+- ❌ Implement different zombie types, like a fast one
+
+🎵 AUDIO & VISUAL:
+- ❌ Add sound effects and music
+- ❌ Add particle effects
+- ❌ Add background graphics
+- ✅ Create loading screen with start button, intro music, and setting menu to switch input mappings.
+
+🏆 PROGRESSION & SYSTEMS:
+- ❌ Add achievements
+- ❌ Add loot system
+- ❌ Add RPG elements like day/night cycle and an encampment with fellow survivors to help against the zombie hoards
+
+🔄 TECHNICAL FEATURES:
+- ❌ Create menu system and pause feature
+- ❌ Implement save/load functionality
